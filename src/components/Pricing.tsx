@@ -1,44 +1,53 @@
 const plans = [
   {
-    name: "Free",
-    price: "0 zł",
-    period: "/ miesiąc",
-    desc: "Dla małych wspólnot i testowania platformy.",
-    features: ["Do 20 lokali", "Rozliczenia podstawowe", "Portal właściciela", "Dokumenty (1 GB)"],
-    cta: "Rozpocznij bezpłatnie",
+    name: "Starter",
+    price: "8 zł",
+    period: "/ lokal / mies.",
+    range: "20–50 lokali",
+    desc: "Dla mniejszych wspólnot stawiających pierwsze kroki z Velio.",
+    features: [
+      "20–50 lokali",
+      "Rozliczenia i windykacja",
+      "Portal właściciela",
+      "MT940 import",
+      "Dokumenty (5 GB)",
+    ],
+    cta: "Rozpocznij bezpłatny okres próbny",
     ctaHref: "https://app.velio.watch/auth/signup",
     highlight: false,
   },
   {
-    name: "Pro",
-    price: "Zapytaj",
-    period: "o cenę",
-    desc: "Dla aktywnie zarządzanych wspólnot z pełnymi funkcjami.",
+    name: "Growth",
+    price: "6 zł",
+    period: "/ lokal / mies.",
+    range: "51–200 lokali",
+    desc: "Dla rozwijających się zarządców obsługujących wiele wspólnot.",
     features: [
-      "Nielimitowane lokale",
-      "MT940 import",
+      "51–200 lokali",
+      "Wszystko ze Starter",
       "Głosowania uchwał",
-      "Komunikacja",
+      "Komunikacja z właścicielami",
       "Priorytetowe wsparcie",
     ],
-    cta: "Zapytaj o cenę",
-    ctaHref: "mailto:michal@velio.watch?subject=Velio Pro — zapytanie o cenę",
+    cta: "Rozpocznij bezpłatny okres próbny",
+    ctaHref: "https://app.velio.watch/auth/signup",
     highlight: true,
   },
   {
     name: "Enterprise",
-    price: "Indywidualnie",
-    period: "",
-    desc: "Dla dużych zarządców z wieloma wspólnotami.",
+    price: "Zapytaj",
+    period: "o wycenę",
+    range: "200+ lokali",
+    desc: "Dla dużych zarządców z wieloma wspólnotami i niestandardowymi wymaganiami.",
     features: [
-      "Wszystko z Pro",
+      "200+ lokali",
+      "Wszystko z Growth",
       "Płatności online",
       "Dedykowane wsparcie",
-      "SLA",
-      "Custom onboarding",
+      "SLA & custom onboarding",
     ],
     cta: "Skontaktuj się",
-    ctaHref: "mailto:michal@velio.watch?subject=Velio Enterprise — kontakt",
+    ctaHref: "mailto:michal@velio.watch?subject=Velio Enterprise — zapytanie o wycenę",
     highlight: false,
   },
 ];
@@ -55,7 +64,7 @@ export default function Pricing() {
             Prosty, uczciwy cennik
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-[var(--color-muted)]">
-            Zacznij bezpłatnie. Płać tylko za to, czego używasz.
+            Płać za lokale, którymi faktycznie zarządzasz. Bez ukrytych opłat.
           </p>
         </div>
 
@@ -81,6 +90,7 @@ export default function Pricing() {
                   <span className="text-sm text-[var(--color-muted)]">{plan.period}</span>
                 )}
               </div>
+              <div className="mb-1 text-xs text-[var(--color-muted)]">{plan.range}</div>
               <p className="mb-6 text-sm text-[var(--color-muted)]">{plan.desc}</p>
 
               <ul className="mb-8 flex-1 space-y-2">
@@ -119,6 +129,10 @@ export default function Pricing() {
             </div>
           ))}
         </div>
+
+        <p className="mt-8 text-center text-xs text-[var(--color-muted)]">
+          Cena netto + VAT. Minimum 20 lokali.
+        </p>
       </div>
     </section>
   );
