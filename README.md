@@ -12,8 +12,8 @@ Marketing site for [Velio](https://velio.watch) — property management SaaS for
 ## Development
 
 ```bash
-npm install
-npm run dev
+pnpm install
+pnpm dev
 ```
 
 ## Deploy
@@ -21,11 +21,7 @@ npm run dev
 See `deploy/` for systemd service and Caddyfile configuration.
 
 ```bash
-# First-time setup on VPS
 sudo cp deploy/velio-ww.service /etc/systemd/system/
-sudo systemctl daemon-reload
-sudo systemctl enable velio-ww
-
-# Deploy
+sudo systemctl daemon-reload && sudo systemctl enable velio-ww
 bash deploy/deploy.sh
 ```
