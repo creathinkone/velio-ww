@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Polityka prywatności — Velio",
+  alternates: { canonical: "https://velio.watch/privacy" },
 };
 
 export default function PrivacyPage() {

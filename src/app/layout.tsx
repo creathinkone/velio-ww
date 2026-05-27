@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     "głosowania uchwał",
   ],
   authors: [{ name: "Velio" }],
+  alternates: {
+    canonical: "https://velio.watch",
+  },
   openGraph: {
     title: "Velio — zarządzanie wspólnotą mieszkaniową",
     description:
@@ -52,9 +55,41 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: "Velio",
+      url: "https://velio.watch",
+      logo: "https://velio.watch/logo.png",
+      description: "Nowoczesny system SaaS do zarządzania wspólnotami mieszkaniowymi.",
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: "Velio",
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      url: "https://velio.watch",
+      description:
+        "System do zarządzania wspólnotami mieszkaniowymi — zgłoszenia, księgowość, głosowania, portal właściciela.",
+      offers: {
+        "@type": "Offer",
+        url: "https://velio.watch/cennik",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pl">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={`${geist.variable} ${inter.variable} antialiased`}>{children}</body>
     </html>
   );

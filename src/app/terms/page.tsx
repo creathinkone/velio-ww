@@ -3,6 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Regulamin — Velio",
+  alternates: { canonical: "https://velio.watch/terms" },
 };
 
 export default function TermsPage() {
