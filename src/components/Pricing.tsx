@@ -12,8 +12,8 @@ const plans = [
       "MT940 import",
       "Dokumenty (5 GB)",
     ],
-    cta: "Rozpocznij bezpłatny okres próbny",
-    ctaHref: "https://app.velio.watch/auth/signup",
+    cta: "Zamów demo",
+    ctaHref: "https://calendly.com/[CALENDLY_LINK]",
     highlight: false,
   },
   {
@@ -29,8 +29,8 @@ const plans = [
       "Komunikacja z właścicielami",
       "Priorytetowe wsparcie",
     ],
-    cta: "Rozpocznij bezpłatny okres próbny",
-    ctaHref: "https://app.velio.watch/auth/signup",
+    cta: "Zamów demo",
+    ctaHref: "https://calendly.com/[CALENDLY_LINK]",
     highlight: true,
   },
   {
