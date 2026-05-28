@@ -5,9 +5,9 @@ import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Cennik — Velio",
+  title: "Cennik Velio — system dla wspólnot mieszkaniowych",
   description:
-    "Velio — przejrzysty cennik bez ukrytych opłat. Plany Starter, Pro i Enterprise dla zarządców wspólnot mieszkaniowych. Zacznij bezpłatne 14-dniowe demo.",
+    "Przejrzysty cennik Velio bez ukrytych opłat. Starter 8 zł/lokal (20–50 lokali), Growth 6 zł/lokal (51–200 lokali). Zamów demo i zacznij zarządzać wspólnotą efektywnie.",
   alternates: { canonical: "https://velio.watch/cennik" },
 };
 
