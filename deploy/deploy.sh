@@ -19,4 +19,7 @@ systemctl restart "$SERVICE_NAME"
 echo "==> Status:"
 systemctl status "$SERVICE_NAME" --no-pager
 
+echo "==> Reloading Caddy config..."
+/home/admin/bin/reload-caddy-velio.sh
+
 echo "==> Deploy complete."

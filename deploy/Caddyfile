@@ -1,16 +1,20 @@
-# velio-ww marketing site — www.velio.watch
-# velio.watch apex = app (port 3002); marketing site served on www.velio.watch (port 3004)
-# To apply: update /etc/caddy/Caddyfile www.velio.watch block (requires sudo)
+# velio-ww marketing site — velio.watch (apex is primary)
+# Apex serves port 3004; www.velio.watch redirects to apex.
+# To apply: caddy reload --config /home/admin/caddy-config.json
+
+velio.watch {
+	reverse_proxy localhost:3004
+	encode gzip zstd
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+		X-Frame-Options "DENY"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "geolocation=(self), camera=(), microphone=(), payment=()"
+		-Server
+	}
+}
+
 www.velio.watch {
-    encode gzip zstd
-
-    header {
-        Strict-Transport-Security "max-age=31536000; includeSubDomains"
-        X-Content-Type-Options nosniff
-        X-Frame-Options DENY
-        Referrer-Policy strict-origin-when-cross-origin
-        Permissions-Policy "camera=(), microphone=(), geolocation=()"
-    }
-
-    reverse_proxy localhost:3004
+	redir https://velio.watch{uri} permanent
 }
