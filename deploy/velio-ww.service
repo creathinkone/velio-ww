@@ -9,8 +9,7 @@ Restart=always
 RestartSec=5
 ExecStart=/usr/bin/docker run --rm \
   --name velio-ww \
-  -p 3001:3000 \
-  --env-file /home/admin/velio-ww/.env.local \
+  -p 127.0.0.1:3004:3000 \
   velio-ww:latest
 
 ExecStop=/usr/bin/docker stop velio-ww

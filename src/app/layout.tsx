@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Velio — zarządzanie wspólnotą mieszkaniową",
+  title: "Velio – Oprogramowanie do zarządzania wspólnotami mieszkaniowymi",
   description:
-    "Rozliczenia, dokumenty, głosowania i komunikacja z właścicielami — w jednym miejscu. Wypróbuj Velio za darmo.",
+    "Velio to nowoczesny system dla zarządców i zarządów wspólnot mieszkaniowych. Księgowość, płatności, portal właściciela i mobile w jednej platformie. Wypróbuj bezpłatnie.",
   keywords: [
     "zarządzanie wspólnotą",
     "wspólnota mieszkaniowa",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     canonical: "https://velio.watch",
   },
   openGraph: {
-    title: "Velio — zarządzanie wspólnotą mieszkaniową",
+    title: "Velio – Oprogramowanie do zarządzania wspólnotami mieszkaniowymi",
     description:
-      "Rozliczenia, dokumenty, głosowania i komunikacja z właścicielami — w jednym miejscu.",
+      "Velio to nowoczesny system dla zarządców i zarządów wspólnot mieszkaniowych. Księgowość, płatności, portal właściciela i mobile w jednej platformie.",
     url: "https://velio.watch",
     siteName: "Velio",
     locale: "pl_PL",
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Velio — zarządzanie wspólnotą mieszkaniową",
-    description: "Rozliczenia, dokumenty, głosowania i komunikacja z właścicielami — w jednym miejscu.",
+    title: "Velio – Oprogramowanie do zarządzania wspólnotami mieszkaniowymi",
+    description: "Velio to nowoczesny system dla zarządców i zarządów wspólnot mieszkaniowych. Księgowość, płatności, portal właściciela i mobile w jednej platformie.",
   },
   metadataBase: new URL("https://velio.watch"),
   robots: { index: true, follow: true },
@@ -72,10 +72,11 @@ const jsonLd = {
       operatingSystem: "Web",
       url: "https://velio.watch",
       description:
-        "System do zarządzania wspólnotami mieszkaniowymi — zgłoszenia, księgowość, głosowania, portal właściciela.",
+        "System do zarządzania wspólnotami mieszkaniowymi. Księgowość, płatności, portal właściciela, mobile PWA.",
       offers: {
         "@type": "Offer",
-        url: "https://velio.watch/cennik",
+        priceCurrency: "PLN",
+        availability: "https://schema.org/InStock",
       },
     },
   ],
