@@ -1,0 +1,18 @@
+[Unit]
+Description=Velio Marketing Site (velio.watch)
+After=network.target docker.service
+Requires=docker.service
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+ExecStart=/usr/bin/docker run --rm \
+  --name velio-ww \
+  -p 127.0.0.1:3004:3000 \
+  velio-ww:latest
+
+ExecStop=/usr/bin/docker stop velio-ww
+
+[Install]
+WantedBy=multi-user.target
